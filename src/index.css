@@ -1,0 +1,173 @@
+html {
+  font-size: 10px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #f4f4f4;
+  color: #333;
+}
+
+p {
+  font-size: 1.6rem;
+}
+
+small {
+  font-size: 1.2rem;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 160rem;
+  padding: 4rem;
+}
+
+.title {
+  font-size: 4.4rem;
+  text-align: center;
+}
+
+.form {
+  display: grid;
+}
+
+.label {
+  font-size: 1.2rem;
+  margin-bottom: 0.2rem;
+  text-transform: uppercase;
+}
+
+.input {
+  border: 1px solid #ddd;
+  border-radius: 2rem;
+  font-size: 1.6rem;
+  padding: 0.5rem 2rem;
+  line-height: 2.8rem;
+  margin-bottom: 1rem;
+}
+
+.button {
+  background-color: rgba(0, 0, 0, 0.75);
+  color: white;
+  padding: 1rem 2rem;
+  border: 1px solid rgba(0, 0, 0, 0.75);
+  border-radius: 2rem;
+  font-size: 1.4rem;
+  cursor: pointer;
+  transition: background-color 250ms;
+}
+
+.button:hover {
+  background-color: rgba(0, 0, 0, 0.85);
+}
+
+.card-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 4rem;
+}
+
+.card {
+  background-color: white;
+  padding: 2rem 4rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  grid-gap: 2rem;
+}
+
+.card--image {
+  margin: 0 auto;
+  display: block;
+  border-radius: 2rem 2rem 0 0;
+  width: 100%;
+  height: 20rem;
+  object-fit: cover;
+}
+
+.card--content {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  grid-gap: 1rem;
+}
+
+.card--title {
+  font-size: 3.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.card--desc {
+  margin: 0;
+}
+
+.card--release-date,
+.card--score,
+.card--desc {
+  font-size: 2rem;
+}
+
+@media (min-width: 786px) {
+  .container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .form {
+    grid-template-columns: auto 1fr auto;
+    grid-gap: 1rem;
+    align-items: center;
+  }
+
+  .input {
+    margin-bottom: 0;
+  }
+
+  .button {
+    width: 100%;
+  }
+
+  .card-list {
+    flex-direction: row;
+  }
+
+  .card {
+    display: flex;
+    flex-direction: column;
+    width: 40rem;
+  }
+
+  .card--content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .card--image {
+    border-radius: 2rem;
+  }
+
+  .card--title {
+    font-size: 2.5rem;
+    margin-top: 1rem;
+  }
+
+  .card--desc {
+    flex: 1 1 auto;
+  }
+
+  .card--release-date,
+  .card--score,
+  .card--desc {
+    font-size: 1.6rem;
+  }
+}
